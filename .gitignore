@@ -1,0 +1,28 @@
+# PyCharm folder
+.idea
+
+# Comipled code
+*.pyc
+
+# Datasets
+*.csv
+*.fits
+*.vot
+*.dat
+*.txt
+*.h5
+*.hdf5
+*.json
+
+# Documents
+*.pdf
+
+# Dump or log data
+*.pkl
+*.out
+
+# Images
+*.jpg
+*.png
+*.bmp
+
