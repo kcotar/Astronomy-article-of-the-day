@@ -9,7 +9,6 @@ class MNRAS():
         self.issues_all_url = self.root_url + '/mnras/issue-archive'
         self.issue_url = self.root_url + '/mnras/issue'  # '/188/1'
 
-
     def _parse_list_of_years(self):
         page_years = urllib2.urlopen(self.issues_all_url)
         page_html = BeautifulSoup(page_years, 'html.parser')

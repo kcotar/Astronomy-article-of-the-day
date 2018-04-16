@@ -2,6 +2,12 @@ import os
 import urllib
 # articles import
 from mnras import *
+from aanda import *
+
+
+def download_pdf(pdf_url):
+    urllib.urlretrieve(pdf_url, pdf_url.split('/')[-1])
+
 
 output_dir = '~/AAOD'
 
@@ -12,4 +18,10 @@ os.chdir(os.path.expanduser(output_dir))
 print 'Searching for a random MNRAS journal'
 pdf_mnras = MNRAS().get_random_article()
 print ' downloading article: ' + pdf_mnras
-urllib.urlretrieve(pdf_mnras, pdf_mnras.split('/')[-1])
+download_pdf(pdf_mnras)
+
+# get AANDA article
+print 'Searching for a random AANDA journal'
+pdf_aanda = AANDA().get_random_article()
+print ' downloading article: ' + pdf_aanda
+download_pdf(pdf_aanda)
